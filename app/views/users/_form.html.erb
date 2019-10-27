@@ -27,6 +27,15 @@
     <span id="notice"></span>
     <span class="field_with_errors"></span>
   </div>
-  <%= link_to "Update password", '', id: :password_updater, data: { user_id: current_user.id} %>
+
+  <% if action_name == "edit" %>
+    <%= button_to "Update password", '', id: :password_updater, data: { user_id: current_user.id} %>
+
+    <div class="field">
+      <%= form.label :comment %>
+      <%= form.text_field :comment %>
+    </div>
+  <% end %>
+  <%= form.submit "Save" %>
 
 <% end %>

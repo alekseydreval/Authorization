@@ -5,7 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :trackable
 
   devise :database_authenticatable, authentication_keys: [:name]
+
   validate :passwords_must_match, on: [:create, :update]
+  validates :name, uniqueness: true
 
   def passwords_must_match
     if password != password_confirmation

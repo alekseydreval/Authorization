@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_24_171751) do
+ActiveRecord::Schema.define(version: 2019_10_27_110337) do
 
   create_table "users", force: :cascade do |t|
     t.boolean "admin"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_10_24_171751) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.string "comment"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["name"], name: "index_users_on_name", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
