@@ -2,4 +2,4 @@
 
 * Runs on Ruby 2.5.*
 
-To launch, rake db:migrate
+To launch, rake `db:migrate`, `rails s`
